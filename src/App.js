@@ -1,16 +1,25 @@
-import './App.css';
-import Weather from './Weather';
+import "./index.css";
+import Search from "./Search";
+import Header from "./Header";
+import Footer from "./Footer";
+import Forecast from "./Forecast";
+import "./index";
 
-
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-      <h1>Hello World</h1>
-      <Weather city="London"/>
-      </header>
+      <div className="container">
+        <div className="weather-app">
+          <Search />
+          <Header />
+          <div>
+            <Forecast />
+          </div>
+          <div>
+            <Footer />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
-
-export default App;
