@@ -1,6 +1,6 @@
 import React from "react";
 import "./index";
-import "./index.css";
+import "./Forecast.css";
 
 export default function Forecast() {
   return (

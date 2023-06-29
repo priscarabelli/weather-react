@@ -1,0 +1,29 @@
+.weekly-forecast {
+    text-align: center;
+    background: linear-gradient(to top, #09203f 0%, #537895 100%);
+    border-radius: 10px;
+    color: white;
+}
+
+.forecast-days .forecast-temp {
+    font-size: 20px;
+}
+
+.min-temp {
+    opacity: 0.6;
+}
+
+.git-emoji {
+    width: 25px;
+    clip-path: circle();
+}
+
+.name {
+    color: gainsboro;
+    font-style: italic;
+}
+@media (max-width: 900px){
+    .weekly-icon {
+            width: 50%;
+        }
+}
