@@ -15,7 +15,7 @@ export default function Footer() {
         <span className="name"> by Pri Scarabelli </span>
         <br />
         <span>Hosted on </span>
-        <a href="https://weatherbypri.netlify.app/" target="_blank" rel="noreferrer">
+        <a href="https://reactweatherbypri.netlify.app/" target="_blank" rel="noreferrer">
           Netlify
         </a>
       </footer>
