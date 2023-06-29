@@ -7,8 +7,7 @@ export default function Footer() {
       <footer>
         <a
           href="https://github.com/priscarabelli/weather-App-git"
-          target="_blank
-"
+          target="_blank" rel="noreferrer"
         >
           {" "}
           Open-sourced{" "}
@@ -16,7 +15,7 @@ export default function Footer() {
         <span className="name"> by Pri Scarabelli </span>
         <br />
         <span>Hosted on </span>
-        <a href="https://weatherbypri.netlify.app/" target="_blank">
+        <a href="https://weatherbypri.netlify.app/" target="_blank" rel="noreferrer">
           Netlify
         </a>
       </footer>
