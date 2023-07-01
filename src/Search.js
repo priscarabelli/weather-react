@@ -10,9 +10,8 @@ export default function Search() {
             type="text"
             className="form-control"
             id="search-bar"
-            autocomplete="off"
-            placeholder="Enter city here"
-          />
+            autocomplete="on"
+            placeholder="Enter city here" />
           <div className="input-group-append">
             <button
               className="btn btn-outline-secondary"
