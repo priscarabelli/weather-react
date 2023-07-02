@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
+import Forecast from "./Forecast"; 
 import axios from "axios";
-import "./Header.css";
+import "./Weather.css";
 
 export default function Header(props){
   const [city, setCity] = useState(props.defaultCity);
@@ -10,6 +11,7 @@ export default function Header(props){
 function handleResponse(response){
 setWeatherData({
   ready: true, 
+  coordinates: response.data.coordinates, 
   city: response.data.city, 
   temperature: response.data.temperature.current,
   description: response.data.condition.description,
@@ -44,7 +46,7 @@ setCity(event.target.value);
             type="text"
             className="form-control"
             id="search-bar"
-            autocomplete="on"
+            autoComplete="on"
             placeholder="Enter city here" 
             onChange={handleCityChange}/>
           <div className="input-group-append">
@@ -67,6 +69,7 @@ setCity(event.target.value);
         </div>
       </form>
       <WeatherInfo data={weatherData}/>
+      <Forecast coordinates={weatherData.coordinates}/>
     </div>
   );} 
   else {

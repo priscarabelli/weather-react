@@ -12,9 +12,9 @@ export default function Footer() {
           {" "}
           Open-sourced{" "}
         </a>
-        <span className="name"> by Pri Scarabelli </span>
+        <span className="name"> by Priscilla Scarabelli </span>
         <br />
-        <span>Hosted on </span>
+        <span className="name">Hosted on </span>
         <a href="https://reactweatherbypri.netlify.app/" target="_blank" rel="noreferrer">
           Netlify
         </a>

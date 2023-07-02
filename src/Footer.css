@@ -5,3 +5,10 @@ footer {
     font-size: 16px;
     color: black;
 }
+footer a{
+    text-decoration: none;
+}
+.name {
+    color: gainsboro;
+    font-style: italic;
+}

@@ -1,85 +1,41 @@
-import React from "react";
+import React, { useState } from "react";
 import "./index";
 import "./Forecast.css";
+import axios from "axios";
+import ForecastDay from "./ForecastDay";
 
-export default function Forecast() {
-  return (
+export default function Forecast(props) {
+  let [loaded, setLoaded] = useState(false); 
+  let [forecast, setForecast] = useState(null); 
+
+function handleResponse(response){
+  setForecast(response.data.daily);
+  setLoaded(true);
+}
+
+if (loaded){
+   return (
+    
     <div className="Forecast">
       <div className="container weekly-forecast">
         <div className="row">
-          <div className="col-sm-2">Mon</div>
-          <div className="col-sm-2">Tue</div>
-          <div className="col-sm-2">Wed</div>
-          <div className="col-sm-2">Thu</div>
-          <div className="col-sm-2">Fri</div>
-          <div className="col-sm-2">Sat</div>
-        </div>
-        <div className="row">
-          <div className="col-sm-2">
-            {" "}
-            <img
-              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
-              alt=""
-              className="img-fluid"
-              width="80px"
-            />{" "}
-          </div>
-          <div className="col-sm-2">
-            {" "}
-            <img
-              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
-              alt=""
-              className="img-fluid"
-              width="80px"
-            />{" "}
-          </div>{" "}
-          <div className="col-sm-2">
-            {" "}
-            <img
-              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
-              alt=""
-              className="img-fluid"
-              width="80px"
-            />{" "}
-          </div>{" "}
-          <div className="col-sm-2">
-            {" "}
-            <img
-              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
-              alt=""
-              className="img-fluid"
-              width="80px"
-            />{" "}
-          </div>{" "}
-          <div className="col-sm-2">
-            {" "}
-            <img
-              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
-              alt=""
-              className="img-fluid"
-              width="80px"
-            />{" "}
-          </div>{" "}
-          <div className="col-sm-2">
-            {" "}
-            <img
-              src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"
-              alt=""
-              className="img-fluid"
-              width="80px"
-            />{" "}
-          </div>
-        </div>
+      <div className="col">
+       <ForecastDay data={forecast[0]}/>
+       </div>
+       
+     </div>
+     </div>
+     </div> ); 
+     
+} else{ 
 
-        <div className="row">
-          <div className="col-sm-2"> 31° | 17°</div>
-          <div className="col-sm-2">29° | 17°</div>
-          <div className="col-sm-2">26° | 17°</div>
-          <div className="col-sm-2">24° | 14°</div>
-          <div className="col-sm-2">25° | 14°</div>
-          <div className="col-sm-2">26° | 14°</div>
-        </div>
-      </div>
-    </div>
-  );
+  const apiKey = "eab04436t3405o6e84aadcd05339dfb6"; 
+  let longitude = props.coordinates.longitude; 
+  let latitude = props.coordinates.latitude; 
+  const apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${longitude}&lat=${latitude}&key=${apiKey}`
+  axios.get(apiUrl).then(handleResponse); 
+  return null; 
+}
+ 
+ 
 }

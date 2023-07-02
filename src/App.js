@@ -1,7 +1,6 @@
 import "./index.css";
-import Header from "./Header";
+import Weather from "./Weather";
 import Footer from "./Footer";
-import Forecast from "./Forecast";
 import 'bootstrap/dist/css/bootstrap.css';
 import "./index";
 
@@ -11,10 +10,7 @@ export default function App() {
     <div className="App">
       <div className="container">
         <div className="weather-app">
-          <Header defaultCity="London" />
-          <div>
-            <Forecast />
-          </div>
+          <Weather defaultCity="London" />
           <div>
             <Footer />
           </div>
