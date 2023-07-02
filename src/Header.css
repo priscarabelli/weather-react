@@ -26,21 +26,6 @@ li::first-letter {
     font-size: 18px;
 }
 
-.temperature-big {
-    color: rgb(33, 33, 33);
-    font-size: 80px;
-    font-weight: 400;
-    line-height: 1;
-    position: relative;
-    left: -25px;
-}
-
-.units {
-    position: relative;
-    top: -45px;
-    left: -25px;
-}
-
 .weather-icon {
     position: relative;
     left: -22px;
@@ -61,17 +46,6 @@ li::first-letter {
     
         li {
             text-align: center;
-        }
-    
-        .temperature-big {
-            position: relative;
-            left: 20px;
-        }
-    
-        .units {
-            position: relative;
-            top: -45px;
-            left: 20px;
         }
     
         .weather-icon {
