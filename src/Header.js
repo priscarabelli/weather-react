@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import FormattedDate from "./FormattedDate";
 import axios from "axios";
 import "./Header.css";
 
@@ -15,12 +16,11 @@ setWeatherData({
   wind: response.data.wind.speed,
   humidity: response.data.temperature.humidity, 
   feelsLike: response.data.temperature.feels_like,
-  date: "Friday 10:57",  
+  date: new Date(response.data.time * 1000),  
   weatherMainIcon: response.data.condition.icon_url,
 })
  
 }
-
   
   if (weatherData.ready)
   { return (
@@ -31,7 +31,7 @@ setWeatherData({
       </h1>
       <ul className="day-time-weather">
         <li className="day-time">
-          <span id="current-date">{weatherData.date}</span>
+          <span id="current-date"><FormattedDate  date={weatherData.date}/></span>
         </li>
         <li>
           <span id="description">{weatherData.description}</span>
