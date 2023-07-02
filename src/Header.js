@@ -52,7 +52,8 @@ setCity(event.target.value);
               className="btn btn-outline-secondary"
               id="search-button"
               type="button"
-            >
+              onClick={handleSubmit}
+         >
               <i className="fa-solid fa-magnifying-glass"></i>
             </button>
             <button
