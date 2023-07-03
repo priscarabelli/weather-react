@@ -3,11 +3,11 @@
     background: linear-gradient(to top, #09203f 0%, #537895 100%);
     border-radius: 10px;
     color: white;
+    
 }
 
 .forecast-days .forecast-temp {
     font-size: 20px;
-
 }
 
 .min-temp {
@@ -16,6 +16,7 @@
 
 .forecast-icon img{
     width: 80px;
+    margin: 0 auto;
 }
 
 @media (max-width: 900px){
