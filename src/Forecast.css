@@ -1,7 +1,7 @@
 .weekly-forecast {
     text-align: center;
     background: linear-gradient(to top, #09203f 0%, #537895 100%);
-    border-radius: 10px;
+    border-radius: 5px;
     color: white;
     
 }
@@ -14,10 +14,7 @@
     opacity: 0.6;
 }
 
-.forecast-icon img{
-    width: 80px;
-    margin: 0 auto;
-}
+
 
 @media (max-width: 900px){
     .weekly-icon {

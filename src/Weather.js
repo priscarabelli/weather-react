@@ -3,6 +3,7 @@ import WeatherInfo from "./WeatherInfo";
 import Forecast from "./Forecast"; 
 import axios from "axios";
 import "./Weather.css";
+import "./index.css"
 
 export default function Header(props){
   const [city, setCity] = useState(props.defaultCity);
@@ -54,16 +55,8 @@ setCity(event.target.value);
               className="btn btn-outline-secondary"
               id="search-button"
               type="button"
-              onClick={handleSubmit}
-         >
+              onClick={handleSubmit} >
               <i className="fa-solid fa-magnifying-glass"></i>
-            </button>
-            <button
-              className=" btn btn-outline-secondary"
-              id="current-button"
-              type="button"
-            >
-              <i className="fa-solid fa-location-dot"></i>
             </button>
           </div>
         </div>

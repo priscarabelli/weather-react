@@ -29,7 +29,7 @@ return(
            />       
         </div>
         <div className="row forecast-temp">
-          <span className="col max-temp"> {maxTemp()} |<span className="min-temp"> {minTemp()} </span>
+          <span className="col max-temp">{maxTemp()} |<span className="min-temp"> {minTemp()}</span>
           </span>
           
 </div>
