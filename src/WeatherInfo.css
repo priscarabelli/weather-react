@@ -10,14 +10,6 @@
     color: white;
 }
 
-#current-button {
-    background-color: white;
-    color: red;
-    border: 1px solid white;
-}
-
-#current-button:hover {
-    transition: all 200ms ease-in-out;
-    background-color: red;
-    color: white;
+#current-date{
+    font-size: 18px;
 }

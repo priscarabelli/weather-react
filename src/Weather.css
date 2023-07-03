@@ -50,12 +50,12 @@ li::first-letter {
     
         .weather-icon {
             position: relative;
-            left: 20px;
+            left: 10px;
             top: -20px;
             width: 150px;
         }
     
         .weather-extra-info {
-            margin-top: -20px;
+            margin-top: -30px;
         }
 }

@@ -22,8 +22,8 @@ export default function WeatherTemperature(props){
          <span className="temperature-big" id="temperature-link">
             {Math.round(props.celsius)}
           </span>
-          <span className="units">°C | 
-          <a href="/" onClick={showFarenheit}>°F</a>
+          <span className="units">°C <span className="bar-units">|</span> 
+          <a href="/" onClick={showFarenheit} className="farenheit-link"> °F</a>
           </span> 
         </span>  
     ) } else {

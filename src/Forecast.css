@@ -3,21 +3,33 @@
     background: linear-gradient(to top, #09203f 0%, #537895 100%);
     border-radius: 5px;
     color: white;
-    
+    border-color: white;
+    padding: 10px;
 }
 
-.forecast-days .forecast-temp {
-    font-size: 20px;
+.max-temp{
+    position: relative;
+    left: 12px;
 }
 
 .min-temp {
     opacity: 0.6;
 }
 
-
+.ForecastDay{
+  background-color: #09203f;  
+  border-radius: 10px;
+  padding: 10px;
+}
 
 @media (max-width: 900px){
-    .weekly-icon {
-            width: 50%;
-        }
+   .weekly-forecast{
+  padding: 10px; 
+   }
+   .forecast-days{
+    margin-top: 10px;
+   }
+   .ForecastDay{
+    margin: 10px;
+   }
 }

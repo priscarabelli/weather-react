@@ -12,3 +12,8 @@ footer a{
     color: gainsboro;
     font-style: italic;
 }
+@media (max-width: 900px){
+    footer{
+        font-size: 14px;
+    }
+}
