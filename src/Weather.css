@@ -1,6 +1,6 @@
 h1 {
     margin: 5px 0 5px;
-    font-size: 40px;
+    font-size: 60px;
     font-weight: bold;
     line-height: 28px;
     text-align: center;
@@ -41,7 +41,8 @@ li::first-letter {
 
 @media (max-width: 900px){
     h1 {
-            margin: 20px;
+        font-size: 60px;
+            margin: 10px;
         }
     
         li {
@@ -56,6 +57,6 @@ li::first-letter {
         }
     
         .weather-extra-info {
-            margin-top: -30px;
+            margin-top: -10px;
         }
 }
