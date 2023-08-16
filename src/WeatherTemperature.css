@@ -1,7 +1,6 @@
 .temperature-big {
     color: rgb(33, 33, 33);
     font-size: 100px;
-    font-weight: 400;
     line-height: 1;
     position: relative;
     left: -15px;
@@ -14,7 +13,7 @@
     position: relative;
     top: -38px;
     left: -20px;
-    font-weight: bold;
+    
 }
 .units a{
     text-decoration: none;
@@ -24,13 +23,14 @@
 @media (max-width: 900px){
 
     .temperature-big {
-        font-size: 80px;
+        font-size: 70px;
             position: relative;
             left: 5px;
             margin-left: 12px;
         }
     
         .units {
+            font-size: 15px;
             position: relative;
             top: -26px;
             left: -5px
